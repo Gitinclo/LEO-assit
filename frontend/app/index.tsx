@@ -73,7 +73,7 @@ export default function Index() {
         blurRadius={2}
         resizeMode="cover"
       />
-      <View style={styles.bgTint} pointerEvents="none" />
+      <View style={[styles.bgTint, { pointerEvents: "none" }]} />
 
       {/* Top bar */}
       <View style={styles.topBar}>
