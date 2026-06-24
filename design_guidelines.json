@@ -1,0 +1,137 @@
+{
+  "project_info": {
+    "name": "LEO AI",
+    "type": "mobile_web_app (React Native Expo)",
+    "description": "A beautiful, modern React Expo mobile app for LEO-AI, an AI chat assistant."
+  },
+  "theme_and_archetype": {
+    "theme": "LIGHT",
+    "archetype": "Archetype 1: Organic & Earthy",
+    "design_philosophy": "E1 Strategy: Move away from cold, neon, 'tech-bro' AI aesthetics. LEO AI should feel like a wise, calm companion. We use pottery color warmth, botanical calmness, and tactile surfaces instead of synthetic glowing gradients. The chat interface should feel like a well-typeset editorial page rather than a terminal."
+  },
+  "colors": {
+    "background": {
+      "default": "#FDFBF7",
+      "surface": "#F4F1EA",
+      "surface_elevated": "#EBE7DD"
+    },
+    "primary": {
+      "default": "#C86A51",
+      "foreground": "#FFFFFF"
+    },
+    "secondary": {
+      "default": "#7E947A",
+      "foreground": "#FFFFFF"
+    },
+    "text": {
+      "primary": "#2D332C",
+      "secondary": "#5C665A",
+      "muted": "#8A9488"
+    },
+    "borders": {
+      "default": "#E2DDD0",
+      "focus": "#C86A51"
+    }
+  },
+  "typography": {
+    "rules": {
+      "heading_font": "Playfair Display or Cormorant Garamond for elegant, humanistic presence. (Load via expo-font)",
+      "body_font": "Manrope or Figtree for high legibility in chat bubbles. (Load via expo-font)",
+      "anti_pattern": "Do NOT use Inter, Roboto, or generic sans-serifs for headings. Avoid center-alignment disease."
+    },
+    "scale": {
+      "h1": "text-4xl tracking-tight leading-tight font-serif text-[#2D332C]",
+      "h2": "text-2xl tracking-tight font-serif text-[#2D332C]",
+      "h3": "text-xl font-serif text-[#2D332C]",
+      "body_large": "text-lg font-sans text-[#2D332C]",
+      "body": "text-base font-sans text-[#5C665A] leading-relaxed",
+      "caption": "text-sm font-sans tracking-wide uppercase text-[#8A9488]"
+    }
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous Spacing Philosophy. The chat should breathe. Use 2-3x more padding than usual.",
+    "container": "px-6 md:px-8",
+    "chat_bubble_spacing": "gap-4 md:gap-6",
+    "grid_system": "flex-col gap-6 for lists, avoiding rigid grids."
+  },
+  "components": {
+    "chat_bubbles": {
+      "user": "bg-[#C86A51] rounded-2xl rounded-tr-sm p-4 shadow-sm",
+      "user_text": "text-white font-sans text-base",
+      "ai": "bg-[#F4F1EA] rounded-2xl rounded-tl-sm p-4 border border-[#E2DDD0]",
+      "ai_text": "text-[#2D332C] font-sans text-base",
+      "interaction": "No generic drop shadows. Rely on border contrast and soft earthy background hues."
+    },
+    "buttons": {
+      "primary": "bg-[#C86A51] rounded-full py-4 px-6 flex items-center justify-center active:opacity-80",
+      "primary_text": "text-white font-sans font-medium tracking-wide",
+      "ghost": "bg-transparent rounded-full py-3 px-5 active:bg-[#EBE7DD]",
+      "ghost_text": "text-[#5C665A]",
+      "voice_input": "bg-[#7E947A] rounded-full p-5 shadow-lg active:scale-95"
+    },
+    "inputs": {
+      "chat_input": "bg-[#F4F1EA] rounded-full px-6 py-4 border border-[#E2DDD0] text-[#2D332C]",
+      "chat_input_focus": "border-[#C86A51]"
+    }
+  },
+  "screens": {
+    "welcome_home": {
+      "layout": "flex-1 justify-center px-8 bg-[#FDFBF7]",
+      "elements": [
+        "Subtle botanical illustration in the background (opacity 10-15%).",
+        "Large Serif Heading: 'Good morning. How can I help you think today?' aligned left.",
+        "Suggested prompt chips: horizontally scrollable (ScrollView horizontal), pill-shaped, bg-[#F4F1EA].",
+        "Floating action button or large input bar fixed at the bottom."
+      ]
+    },
+    "chat_screen": {
+      "layout": "flex-1 bg-[#FDFBF7]",
+      "header": "Solid or slightly translucent header bg-[#FDFBF7]/90 with back button and AI Avatar.",
+      "list": "FlatList with generous bottom padding for the input area.",
+      "input_area": "Fixed bottom, solid background bg-[#FDFBF7] border-t border-[#E2DDD0] p-4."
+    },
+    "history_sidebar_drawer": {
+      "layout": "bg-[#F4F1EA] flex-1 p-6",
+      "elements": [
+        "Caption uppercase text for date groupings (e.g., 'TODAY', 'YESTERDAY') using text-sm text-[#8A9488].",
+        "List items: row layout, minimal icons (lucide-react-native or vector-icons), text-[#5C665A]."
+      ]
+    },
+    "settings": {
+      "layout": "flex-1 bg-[#FDFBF7] px-6 py-8",
+      "elements": [
+        "List items with hard bottom borders (border-b border-[#E2DDD0]) instead of cards.",
+        "Destructive actions in terracotta/primary color (#C86A51)."
+      ]
+    }
+  },
+  "media_assets": [
+    {
+      "category": "backgrounds",
+      "url": "https://images.unsplash.com/photo-1584282617200-32f377e493ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwyfHxib3RhbmljYWwlMjBpbGx1c3RyYXRpb24lMjB2aW50YWdlfGVufDB8fHx8MTc4MjM0MTExNnww&ixlib=rb-4.1.0&q=85",
+      "description": "White and yellow flower with green leaves - use with low opacity (5-10%) as a subtle background image for the Welcome screen. Use React Native Image component with absolute positioning."
+    },
+    {
+      "category": "ai_avatar",
+      "url": "https://images.unsplash.com/photo-1646038572806-3d5f4252c567?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxjYWxtJTIwZ3JhZGllbnQlMjBzcGhlcmV8ZW58MHx8fHwxNzgyMzQxMTIwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Calm gradient sphere - use as the AI avatar icon for LEO, styled with rounded-full."
+    }
+  ],
+  "motion_and_interactions": {
+    "philosophy": "Fluid, unhurried, natural. Use React Native Reanimated or LayoutAnimation.",
+    "typing_indicator": "Three subtle fading dots, color text-[#8A9488]. Avoid robotic jumping animations.",
+    "message_appearance": "Fade in and slide up slightly.",
+    "drawer_transition": "Smooth slide-in from the left edge."
+  },
+  "testing_attributes": {
+    "rule": "All interactive elements MUST include testID (React Native equivalent of data-testid).",
+    "examples": [
+      "testID='chat-input-field'",
+      "testID='send-message-button'",
+      "testID='voice-input-button'",
+      "testID='history-drawer-toggle'",
+      "testID='new-chat-button'"
+    ]
+  },
+  "instructions_to_main_agent": "Use Expo and React Native with NativeWind (or standard StyleSheet if preferred, though NativeWind classes are provided). Strictly follow the color palette. Do NOT use default blue or purple. Do NOT use Inter for headings. Use standard lucide-react-native icons. Ensure Markdown renders correctly in AI responses. DO NOT use placeholder images; rely ENTIRELY on the provided media_assets URLs."
+}
